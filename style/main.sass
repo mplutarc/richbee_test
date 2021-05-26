@@ -1,0 +1,207 @@
+/*Цвета*/
+$yellow: #FFD637
+$hover-yellow: #FFC237
+$dark: #383838
+$menu-gray: #B8B8B8
+$elems-back: #F8F8F8
+$hover-elems-back: #EFEFEF
+
+/*Повторяющиеся значения*/
+$semi-bold: 600
+$bold: 700
+$input-padding: 0.8em 1em
+$border-radius: 4px
+
+html
+	font-size: 14px
+
+/*Хедер*/
+.header
+	background-color: $dark
+	.container
+		display: flex
+		justify-content: space-between
+		padding: 1em
+	&-hrefs
+		a
+			color: $menu-gray
+			text-decoration: none
+			margin: 0 10px
+			&:hover
+				color: white
+			&:first-child
+				margin-left: 0
+	&-info
+		display: flex
+		a
+			color: white
+			text-decoration: none
+			margin: 0 10px
+			font-weight: $bold
+			&:last-child
+				margin-right: 0
+		&_call
+			margin: 0 10px
+			padding: 0
+			background: none
+			color: $yellow
+			border: none
+			border-bottom: dashed 1px $yellow
+
+.head
+	box-shadow: 0 13px 22px rgba(228, 228, 228, 0.25)
+	padding: 35px 0 21px 0
+	.container
+		display: flex
+		flex-direction: column
+	&-controls
+		display: flex
+		justify-content: space-between
+		&_logo
+			display: flex
+			.name
+				margin-left: 1.3em
+		&_search
+			max-width: 50%
+			input
+				padding: 1em 1.5em
+			button
+				width: 51px
+				border: none
+				background-color: $yellow
+				&:hover
+					background-color: $hover-yellow
+		&_login, &_basket
+			background-color: $elems-back
+			border: none
+			border-radius: $border-radius
+			padding: 0 0.8em
+			width: 180px
+			display: flex
+			align-items: center
+			text-align: left
+			&:hover
+				background-color: $hover-elems-back
+			img
+				margin-right: 0.8em
+			.text
+				padding-left: 0.8em
+				border-left: 1px solid #E4E4E4
+				height: 51px
+				display: flex
+				align-items: center
+				p
+					color: $dark
+					margin: 0
+				span
+					color: #ACACAC
+	&-menu
+		display: flex
+		justify-content: space-between
+		margin-top: 2.85em
+		a
+			text-decoration-line: none
+			font-weight: $bold
+		&_main
+			a
+				margin-right: 20px
+				color: $dark
+		&_catalog
+			border-left: 1px solid #E4E4E4
+			a
+				margin-left: 20px
+				color: #B8B8B8
+
+/*Футер*/
+footer
+	background-color: $yellow
+	font-size: 16px
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 65px 0
+		p
+			color: $dark
+			width: 26%
+		.news-n-promos
+			font-size: 2em
+			font-weight: $bold
+			line-height: 1em
+		.mailing
+			font-size: 1em
+		input
+			border: 1px solid $dark
+			background: none
+			width: 250px
+			padding: $input-padding
+			&::placeholder
+				color: $dark
+		button
+			background-color: $dark
+			padding: 0.8em 2em
+			border-radius: $border-radius
+			font-weight: $semi-bold
+			color: $yellow
+			&:hover
+				color: white
+
+/*Модалка*/
+.modal-backdrop.show
+	background: rgba(56, 56, 56, 0.2)
+	backdrop-filter: blur(4px)
+.modal
+	font-size: 16px
+	border-radius: $border-radius
+	&-dialog
+		max-width: 600px
+	&-header
+		border-bottom: none
+		padding: 30px 30px 0 0
+	&-title
+		font-weight: $bold
+		font-size: 2.25em
+		color: #0B0B0B
+	&-body
+		padding: 0 45px 60px 45px
+	.form
+		margin-top: 10px
+		&-group
+			margin-top: 20px
+			label
+				color: #797979
+			input
+				margin-top: 1rem
+				padding: $input-padding
+				background-color: $elems-back
+				border: none
+				border-radius: $border-radius
+				&::placeholder
+					color: #ACACAC
+				&:hover, &:focus
+					border: 1px solid $menu-gray
+		.buttons
+			display: flex
+			justify-content: space-between
+			button
+				width: 246px
+				padding: 1rem
+				border: none
+				border-radius: $border-radius
+				text-align: center
+				color: $dark
+				font-weight: $bold
+				font-size: 1rem
+			.login_btn
+				background-color: $yellow
+				&:hover
+					background-color: $hover-yellow
+			.register_btn
+				background-color: $elems-back
+				&:hover
+					background-color: $hover-elems-back
+		a
+			color: #0B0B0B
+
+
+@import "style/media"
