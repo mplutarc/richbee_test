@@ -1,5 +1,66 @@
 @media (min-width: 1200px)
 	.container
-		//width: 1200px !important
-		max-width: 1200px !important
+		max-width: 1200px
 
+@media (min-width: 375px) and (max-width: 1200px)
+	.container
+		max-width: 980px
+	.header
+		&_hrefs
+			width: 35%
+			a:first-child
+				margin-left: 10px
+		&_info
+			align-items: center
+	.head_controls_search
+		width: 360px
+	.main
+		&_product
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			.card
+				align-items: center
+			&_infocard
+				margin-left: 0
+				margin-top: 60px
+				width: 520px
+				&_body
+					width: 100%
+				&_price_info
+					width: 100%
+				&_price
+					margin-top: 1rem
+					&_wholesale-info
+						right: 19px
+			&_description
+				margin-top: 60px
+				.tab-content
+					.availability.active
+						table
+							td:last-child
+								padding-right: 25px
+		.analogs
+			.arrows
+				width: 100%
+				left: 0
+			.cards
+				width: 99%
+				margin: auto
+				.card
+					width: 230px
+					&-body
+						.wholesale
+							.old-price
+								margin-left: 15px
+							&_price-info
+								right: -118px
+								bottom: 5px
+	footer
+		.container
+			justify-content: space-around
+		form
+			display: flex
+			flex-direction: column
+			align-items: center
+			//width: 20%
